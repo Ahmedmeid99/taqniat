@@ -28,7 +28,6 @@
 
 }
 .label{
-font-family: var(--font-tahoma);
   font-weight: 600;
     font-size: 1.6rem;
     white-space: nowrap;
