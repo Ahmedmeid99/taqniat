@@ -2,33 +2,23 @@ import Section from "../../ui/Section/Section";
 import styles from "./AboutSection.module.css";
 import aboutImage from "../../assets/Images/WhyUs.png";
 import HeroTitle from "../../ui/HeroTitle/HeroTitle";
+import { useLanguage } from "../../context/LanguageContext";
+
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   return (
     <Section>
       <div className="container">
-        <HeroTitle title="About Us" />
+        <HeroTitle title={t.about.title} />
         <div className={styles.about}>
           <div className={styles.aboutText}>
-            <div className={styles.slug}>Who we are? </div>
-            <h4 className={styles.title}>TAQNIAT ALMONSHAAT ALTHAKIYAH </h4>
+            <div className={styles.slug}>{t.about.slug}</div>
+            <h4 className={styles.title}>{t.about.companyName}</h4>
             <article>
-              <p>
-                is a dynamic and innovative IT services provider founded in the
-                heart of Saudi Arabia, dedicated to empowering startups, Small
-                and Medium-sized Enterprises (SMEs) in their digital
-                journey.{" "}
-              </p>
-              <p>
-                Aligned with the ambitious goals of Saudi Vision 2030, we offer
-                a comprehensive suite of IT services and solutions designed to
-                enhance efficiency, foster growth, and drive innovation within
-                the Kingdom's dynamic business ecosystem.{" "}
-              </p>
-              <p>
-                From foundational IT infrastructure to cutting-edge AI & Cloud
-                solutions, our expertise ensures our clients are well-equipped
-                to compete and thrive in the digital age.
-              </p>
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
+              <p>{t.about.p3}</p>
             </article>
           </div>
           <div className={styles.imageCover}>

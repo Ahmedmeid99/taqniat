@@ -13,7 +13,7 @@ const Footer = () => {
               <img src={logo} alt="" />
             </a>
             <p className={styles.text}>
-              Empowering modern Saudi Startups and SMEs with Smart IT Solutions
+              {t.footer.desc}
             </p>
           </div>
 

@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 const content = {
   en: {
     header: {
-      brand: "IT Services SA",
+      brand: "TAQNIAT ALMONSHAAT",
       home: "Home",
       about: "About Us",
       services: "Our Services",
@@ -11,9 +11,17 @@ const content = {
       btn: "Contact Us",
     },
     hero: {
-      title: "Empowering Saudi Startups & SMEs",
+      title: "Empowering modern Saudi Startups and SMEs with Smart IT Solutions",
       subtitle:
-        "Your trusted partner in digital transformation. Comprehensive IT solutions from foundational infrastructure to cutting-edge AI and Cloud technologies.",
+        "TAQNIAT ALMONSHAAT ALTHAKIYAH is a dynamic and innovative IT services provider founded in the heart of Saudi Arabia, dedicated to empowering startups, Small and Medium-sized Enterprises (SMEs) in their digital journey. Aligned with the ambitious goals of Saudi Vision 2030, we offer a comprehensive suite of IT services and solutions designed to enhance efficiency, foster growth, and drive innovation within the Kingdom's dynamic business ecosystem. From foundational IT infrastructure to cutting-edge AI & Cloud solutions, our expertise ensures our clients are well-equipped to compete and thrive in the digital age.",
+      vision: {
+        label: "Our Vision",
+        text: "To be one of the leading IT services providers in Saudi Arabia, recognized for innovation, excellence, and pivotal role in accelerating digital growth for startups and SMEs",
+      },
+      mission: {
+        label: "Our Mission",
+        text: "To empower Saudi Arabian startups and SMEs with robust, future-proof IT solutions & strategic guidance, enabling operational excellence, competitive advantage, and sustainable growth in an increasingly digital & interconnected world",
+      },
       ctaConsultation: "Get a Free Consultation",
       ctaServices: "Explore Our Services",
       visionBadge: "Vision 2030 Aligned",
@@ -51,7 +59,7 @@ const content = {
       },
     },
     services: {
-      title: "Complete Service Portfolio",
+      title: "Our Comprehensive IT Services",
       list: [
         "Basic IT Setup",
         "IT Infrastructure Setup",
@@ -71,9 +79,12 @@ const content = {
       ],
     },
     about: {
-      title: "About IT Services SA",
-      p1: "Founded in Saudi Arabia, we are dedicated to empowering startups and SMEs in their digital transformation journey. We understand the unique challenges and opportunities within the Saudi market, particularly the national imperative for digital adoption.",
-      p2: "Our team of seasoned professionals is committed to delivering tailored, scalable, and secure IT services that address your specific needs. We enable you to focus on your core business while we expertly manage your technological evolution.",
+      title: "About Us",
+      slug: "Who we are?",
+      companyName: "TAQNIAT ALMONSHAAT ALTHAKIYAH",
+      p1: "is a dynamic and innovative IT services provider founded in the heart of Saudi Arabia, dedicated to empowering startups, Small and Medium-sized Enterprises (SMEs) in their digital journey.",
+      p2: "Aligned with the ambitious goals of Saudi Vision 2030, we offer a comprehensive suite of IT services and solutions designed to enhance efficiency, foster growth, and drive innovation within the Kingdom's dynamic business ecosystem.",
+      p3: "From foundational IT infrastructure to cutting-edge AI & Cloud solutions, our expertise ensures our clients are well-equipped to compete and thrive in the digital age.",
       satisfactionRate: "100%",
       satisfactionLabel: "Client Satisfaction",
       categoriesCount: "15+",
@@ -118,15 +129,30 @@ const content = {
       title: "Ready to Transform Your Business?",
       subtitle:
         "Contact us today for a personalized consultation and discover how our expert IT solutions can drive your success.",
-      ctaTouch: "Get in Touch",
-      ctaLearn: "Learn More",
+      ctaBtn: "Contact Us for free consultation",
+      infoTitle: "Contact Info",
       email: "Email",
       phone: "Phone",
       location: "Location",
       locationVal: "Riyadh, Saudi Arabia",
+      form: {
+        name: "Name",
+        namePlaceholder: "John Doe",
+        email: "Email",
+        emailPlaceholder: "john@example.com",
+        phone: "Phone",
+        phonePlaceholder: "+966 50 000 0000",
+        company: "Company",
+        companyPlaceholder: "My Startup LLC",
+        service: "Service",
+        message: "Message",
+        send: "Send",
+        success: "Thank you! Your message has been sent successfully.",
+        error: "Please fill in all required fields.",
+      },
     },
     footer: {
-      desc: "Empowering Saudi businesses through digital transformation.",
+      desc: "Empowering modern Saudi Startups and SMEs with Smart IT Solutions",
       services: "Services",
       infra: "Infrastructure",
       dev: "Development",
@@ -139,22 +165,30 @@ const content = {
       terms: "Terms of Service",
       privacyPolicy: "Privacy Policy",
       copyright:
-        "© 2026 IT Services SA. All rights reserved. Aligned with Vision 2030.",
+        "© 2026 TAQNIAT ALMONSHAAT. All rights reserved. Aligned with Vision 2030.",
     },
   },
   ar: {
     header: {
-      brand: "خدمات تقنية المعلومات SA",
-      home: "الرائيسية",
+      brand: "تقنيات المنشآت",
+      home: "الرئيسية",
       about: "من نحن",
       services: "خدماتنا",
       contact: "اتصل بنا",
       btn: "اتصل بنا",
     },
     hero: {
-      title: "تمكين الشركات السعودية الناشئة والصغيرة والمتوسطة",
+      title: "تمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في المملكة بحلول تقنية ذكية",
       subtitle:
-        "شريكك الموثوق في التحول الرقمي. حلول تقنية معلومات متكاملة تبدأ من البنية التحتية الأساسية وصولاً إلى تقنيات الذكاء الاصطناعي والسحابية المتقدمة.",
+        "تقنيات المنشآت الذكية هي شركة مزوِّدة لخدمات تقنية المعلومات، تأسست في قلب المملكة العربية السعودية، وتكرّس جهودها لتمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في رحلتها الرقمية. انسجاماً مع الأهداف الطموحة لرؤية 2030، نقدم مجموعة متكاملة من خدمات وحلول تقنية المعلومات الهادفة إلى تعزيز الكفاءة، وتحفيز النمو، ودفع الابتكار داخل البيئة الأعمال الديناميكية في المملكة. من البنية التحتية الأساسية لتقنية المعلومات وصولاً إلى حلول الذكاء الاصطناعي والسحابة المتطورة، تضمن خبرتنا تأهيل عملائنا للمنافسة والازدهار في العصر الرقمي.",
+      vision: {
+        label: "رؤيتنا",
+        text: "أن نكون من الشركات الرائدة في مجال خدمات تقنية المعلومات في المملكة العربية السعودية، معروفين بالابتكار والتميز، ودورنا المحوري في تسريع النمو الرقمي للشركات الناشئة والمنشآت الصغيرة والمتوسطة",
+      },
+      mission: {
+        label: "مهمتنا",
+        text: "تمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في المملكة بحلول تقنية معلومات متينة ومستدامة وإرشاد استراتيجي، بما يتيح التميز التشغيلي والميزة التنافسية والنمو المستدام في عالم رقمي متشابك",
+      },
       ctaConsultation: "احصل على استشارة مجانية",
       ctaServices: "استكشف خدماتنا",
       visionBadge: "متوافق مع رؤية 2030",
@@ -174,7 +208,7 @@ const content = {
           desc: "إدارة استباقية ومساعدة تقنية سريعة الاستجابة لضمان تشغيل العمليات بسلاسة.",
         },
         dev: {
-          title: "تتطوير الويب والهواتف المحمولة",
+          title: "تطوير الويب والهواتف المحمولة",
           desc: "تجارب رقمية احترافية وجذابة عبر منصات الويب وتطبيقات الجوال.",
         },
         cloud: {
@@ -183,7 +217,7 @@ const content = {
         },
         ai: {
           title: "الذكاء الاصطناعي",
-          desc: "تسخير الذكاء الاصطناعي لدفع الابتكار، وأتمتة العمليات، والحصول على رؤى قابلة للتطبيق.",
+          desc: "تسخير الذكاء الاصطناعي لدفع الابتكار وأتمتة العمليات والحصول على رؤى قابلة للتطبيق.",
         },
         integration: {
           title: "تكامل الأنظمة",
@@ -192,7 +226,7 @@ const content = {
       },
     },
     services: {
-      title: "محفظة الخدمات المتكاملة",
+      title: "خدماتنا الشاملة لتقنية المعلومات",
       list: [
         "إعداد تقنية المعلومات الأساسية",
         "تأسيس البنية التحتية لتقنية المعلومات",
@@ -212,21 +246,24 @@ const content = {
       ],
     },
     about: {
-      title: "حول خدمات تقنية المعلومات SA",
-      p1: "تأسسنا في المملكة العربية السعودية، ونلتزم بتمكين الشركات الناشئة والصغيرة والمتوسطة في رحلة تحولها الرقمي. نحن نتفهم التحديات والفرص الفريدة داخل السوق السعودي، لا سيما الضرورة الوطنية للتبني الرقمي.",
-      p2: "يلتزم فريقنا من المحترفين ذوي الخبرة بتقديم خدمات تقنية معلومات مخصصة وآمنة وقابلة للتوسع تلبي احتياجاتك الخاصة. نحن نمكنك من التركيز على عملك الأساسي بينما ندير تطورك التكنولوجي بمهارة.",
+      title: "من نحن",
+      slug: "تعرّف علينا",
+      companyName: "تقنيات المنشآت الذكية",
+      p1: "شركة مزوِّدة لخدمات تقنية المعلومات، تأسست في قلب المملكة العربية السعودية، وتكرّس جهودها لتمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في رحلتها الرقمية.",
+      p2: "انسجاماً مع الأهداف الطموحة لرؤية 2030، نقدم مجموعة متكاملة من خدمات وحلول تقنية المعلومات الهادفة إلى تعزيز الكفاءة وتحفيز النمو ودفع الابتكار داخل البيئة الأعمال الديناميكية في المملكة.",
+      p3: "من البنية التحتية الأساسية لتقنية المعلومات وصولاً إلى حلول الذكاء الاصطناعي والسحابة المتطورة، تضمن خبرتنا تأهيل عملائنا للمنافسة والازدهار في العصر الرقمي.",
       satisfactionRate: "100%",
       satisfactionLabel: "رضا العملاء",
       categoriesCount: "15+",
       categoriesLabel: "تصنيفاً للخدمات",
     },
     whyUs: {
-      title: "لماذا تختار خدمات تقنية المعلومات SA؟",
+      title: "لماذا تختار تقنيات المنشآت؟",
       reasons: [
         {
           title: "خبرة محلية",
           description:
-            "فهم عميق للسوق السعودي، والبيئة التنظيمية، وثقافة الأعمال المحلية.",
+            "فهم عميق للسوق السعودي والبيئة التنظيمية وثقافة الأعمال المحلية.",
         },
         {
           title: "حلول شاملة ومتكاملة",
@@ -255,18 +292,33 @@ const content = {
       ],
     },
     contact: {
-      title: "هل أنت جاهز لتحويل أعمالك رقمياً؟",
+      title: "هل أنت مستعد لتحويل أعمالك رقمياً؟",
       subtitle:
         "تواصل معنا اليوم للحصول على استشارة مخصصة واكتشف كيف يمكن لحلولنا التقنية الخبيرة أن تدفع نجاحك.",
-      ctaTouch: "تواصل معنا",
-      ctaLearn: "معرفة المزيد",
+      ctaBtn: "تواصل معنا للحصول على استشارة مجانية",
+      infoTitle: "معلومات التواصل",
       email: "البريد الإلكتروني",
       phone: "الهاتف",
       location: "الموقع",
       locationVal: "الرياض، المملكة العربية السعودية",
+      form: {
+        name: "الاسم",
+        namePlaceholder: "محمد أحمد",
+        email: "البريد الإلكتروني",
+        emailPlaceholder: "example@domain.com",
+        phone: "الهاتف",
+        phonePlaceholder: "+966 50 000 0000",
+        company: "الشركة",
+        companyPlaceholder: "شركتي للتقنية",
+        service: "الخدمة",
+        message: "الرسالة",
+        send: "إرسال",
+        success: "شكراً لك! تم إرسال رسالتك بنجاح.",
+        error: "يرجى ملء جميع الحقول المطلوبة.",
+      },
     },
     footer: {
-      desc: "تمكين الشركات السعودية من خلال التحول الرقمي.",
+      desc: "تمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في المملكة بحلول تقنية ذكية",
       services: "الخدمات",
       infra: "البنية التحتية",
       dev: "التطوير والبرمجة",
@@ -279,7 +331,7 @@ const content = {
       terms: "شروط الخدمة",
       privacyPolicy: "سياسة الخصوصية",
       copyright:
-        "© 2026 جميع الحقوق محفوظة لشركة خدمات تقنية المعلومات SA. متوافق مع رؤية 2030.",
+        "© 2026 تقنيات المنشآت. جميع الحقوق محفوظة. متوافق مع رؤية 2030.",
     },
   },
 };
