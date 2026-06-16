@@ -35,15 +35,12 @@ const Footer = () => {
           <div className={styles.col}>
             <div className={styles.label}>{t.footer.services}</div>
             <ul>
-              <li>
-                <a href="#services">{t.footer.infra}</a>
-              </li>
-              <li>
-                <a href="#services">{t.footer.dev}</a>
-              </li>
-              <li>
-                <a href="#services">{t.footer.cloud}</a>
-              </li>
+              <li><a href="#services">{t.footer.s1}</a></li>
+              <li><a href="#services">{t.footer.s2}</a></li>
+              <li><a href="#services">{t.footer.s3}</a></li>
+              <li><a href="#services">{t.footer.s4}</a></li>
+              <li><a href="#services">{t.footer.s5}</a></li>
+              <li><a href="#services">{t.footer.s6}</a></li>
             </ul>
           </div>
         </div>

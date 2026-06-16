@@ -3,6 +3,8 @@ import HeroSection from "../components/HeroSection/HeroSection";
 import AboutSection from "../components/AboutSection/AboutSection";
 import ServicesSection from "../components/ServicesSection/ServicesSection";
 import ContactSection from "../components/ContactSection/ContactSection";
+import ScrollToTop from "../ui/ScrollToTop/ScrollToTop";
+
 const Home = () => {
   return (
     <Layout>
@@ -10,6 +12,7 @@ const Home = () => {
       <AboutSection />
       <ServicesSection />
       <ContactSection />
+      <ScrollToTop />
     </Layout>
   );
 };

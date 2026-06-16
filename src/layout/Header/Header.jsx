@@ -1,15 +1,64 @@
+import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 import logo from "../../assets/logos/logo.png";
 import logoAr from "../../assets/logos/logo-ar.jpg";
-import subLogo from "../../assets/logos/sub-logo.png";
+
+// Map each nav link to its section ID (null = top of page / Home)
+const NAV_LINKS = [
+  { key: "home",     href: "#",        sectionId: null },
+  { key: "about",    href: "#about",   sectionId: "about" },
+  { key: "services", href: "#services",sectionId: "services" },
+  { key: "contact",  href: "#contact", sectionId: "contact" },
+];
+
 const Header = () => {
   const { lang, toggleLanguage, t } = useLanguage();
+  const [activeSection, setActiveSection] = useState(null);
+
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.filter((l) => l.sectionId).map((l) => l.sectionId);
+    const HEADER_HEIGHT = 90;
+
+    const getActiveSection = () => {
+      // At very top → Home active
+      if (window.scrollY < 10) {
+        setActiveSection(null);
+        return;
+      }
+
+      const scrollPos = window.scrollY + HEADER_HEIGHT + 10;
+      let current = null;
+
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        // el.offsetTop = absolute distance from document top
+        if (el.offsetTop <= scrollPos) {
+          current = id;
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", getActiveSection, { passive: true });
+    getActiveSection();
+
+    return () => window.removeEventListener("scroll", getActiveSection);
+  }, []);
+
+  const isActive = (link) =>
+    link.sectionId === null
+      ? activeSection === null
+      : activeSection === link.sectionId;
 
   return (
     <header>
       <div className={styles.bar}></div>
       <nav className={styles.navbar + " container"}>
+
+        {/* Logo */}
         <a href="#" className={styles.logo} aria-label="Go to top">
           <span className={styles.text}>
             {lang === "en" ? (
@@ -26,31 +75,23 @@ const Header = () => {
           </span>
         </a>
 
+        {/* Nav links */}
         <div className={styles.navActions}>
           <ul className={styles.navLinks}>
-            <li>
-              <a href="/#" className={styles.link}>
-                {t.header.home}
-              </a>
-            </li>
-            <li>
-              <a href="#about" className={styles.link}>
-                {t.header.about}
-              </a>
-            </li>
-            <li>
-              <a href="#services" className={styles.link}>
-                {t.header.services}
-              </a>
-            </li>
-
-            {/* <li>
-              <a href="#contact" className={styles.link}>
-                {t.header.contact}
-              </a>
-            </li> */}
+            {NAV_LINKS.map((link) => (
+              <li key={link.key}>
+                <a
+                  href={link.href}
+                  className={`${styles.link} ${isActive(link) ? styles.active : ""}`}
+                >
+                  {t.header[link.key]}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
+
+        {/* Actions */}
         <div className={styles.actions}>
           <button
             onClick={toggleLanguage}
@@ -59,8 +100,7 @@ const Header = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="16" height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -80,6 +120,7 @@ const Header = () => {
             <a href="#contact">{t.header.btn}</a>
           </button>
         </div>
+
       </nav>
     </header>
   );

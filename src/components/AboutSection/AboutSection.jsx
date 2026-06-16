@@ -8,8 +8,8 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <Section id="about">
-      <div className="container">
+    <Section >
+      <div className="container" id="about" >
         <HeroTitle title={t.about.title} />
         <div className={styles.about}>
           <div className={styles.aboutText}>
