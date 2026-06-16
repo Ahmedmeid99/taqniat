@@ -1,0 +1,6 @@
+.card{
+        border: 1px solid var(--green);
+    background: var(--blue-100);
+    overflow: hidden;
+}
+
