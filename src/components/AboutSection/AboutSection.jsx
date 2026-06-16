@@ -9,7 +9,7 @@ const AboutSection = () => {
 
   return (
     <Section>
-      <div className="container">
+      <div className="container" id="about">
         <HeroTitle title={t.about.title} />
         <div className={styles.about}>
           <div className={styles.aboutText}>

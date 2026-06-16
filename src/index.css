@@ -40,6 +40,7 @@
 html {
   font-size: 56.25%;
   scroll-behavior: smooth;
+      scroll-padding: 10rem;
 }
 
 body {
@@ -54,9 +55,16 @@ html[lang="ar"] body {
 ul{
   list-style: none;
 }
- a{
+ a {
   text-decoration: none !important;
+  font-family: inherit;
+  font-size: inherit;
 }
+button{
+    font-family: inherit;
+    cursor: pointer;
+}
+
 p{
   line-height: 1.4;
 }

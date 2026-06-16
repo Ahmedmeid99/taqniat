@@ -18,17 +18,28 @@
     max-width: 35rem;
     color: var(--white);
     font-size: 2.5rem;
+    text-shadow: 0px 0px 3px #000000;
 }
+
 .hero .subTitle{
     font-size: 1.2rem;
-    line-height: 1.5;
     color: var(--blue);
     background: #ffffffc2;
     padding: 1rem;
     border-radius: .5rem;
+    display: block;
     max-width: 830px;
     margin-left: auto;
     margin-bottom: 2.4rem;
+        margin-right: 2.4rem;
+}
+.hero .subTitle strong{
+        margin-bottom: 1rem;
+        display: block;
+}
+.hero .subTitle p{
+line-height: 1.4;
+    margin-bottom: 0.5rem;
 }
 
 .companyInfo{
@@ -66,13 +77,9 @@ margin-bottom: 1rem;
         margin-left: 2rem;
 
 }
-/* .companyInfo .mission h3{
-    
+html[lang="ar"] .hero .subTitle{margin-right: auto;    margin-left: 2.4rem;
 }
-
-.companyInfo .mission p{
-    
-} */
+html[lang="ar"] .hero .title{right: 5%;}
 
     
 

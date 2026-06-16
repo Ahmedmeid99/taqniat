@@ -1,6 +1,7 @@
 import styles from "./Header.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 import logo from "../../assets/logos/logo.png";
+import logoAr from "../../assets/logos/logo-ar.jpg";
 import subLogo from "../../assets/logos/sub-logo.png";
 const Header = () => {
   const { lang, toggleLanguage, t } = useLanguage();
@@ -11,8 +12,17 @@ const Header = () => {
       <nav className={styles.navbar + " container"}>
         <a href="#" className={styles.logo} aria-label="Go to top">
           <span className={styles.text}>
-            <img src={logo} alt="" />
-            <img src={subLogo} alt="" />
+            {lang === "en" ? (
+              <>
+                <img src={logo} alt="" />
+                <span>Smart Solutions for Modern Businesses</span>
+              </>
+            ) : (
+              <>
+                <img src={logoAr} alt="" />
+                <span>حلول ذكية للمنشآت الحديثة</span>
+              </>
+            )}
           </span>
         </a>
 

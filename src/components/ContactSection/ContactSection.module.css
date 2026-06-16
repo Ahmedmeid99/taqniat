@@ -32,6 +32,8 @@
     margin-right: 1rem;
     transition: var(--transition);
 }
+html[lang="ar"] .mainBtn svg{
+    margin-left: 1rem;}
 .mainBtn:hover {
         background-color: var(--color-blue-700);
             box-shadow: 1px 3px 7px rgb(0 0 0 / 38%);
@@ -172,6 +174,20 @@
 
 }
 
+.form label{
+        font-size: 1.6rem;
+    color: var(--blue);
+}
+.contactBtn{
+      border: none;
+    background: var(--blue);
+    padding: .75rem 1.5rem;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    width: 100%;
+}
 
 
 .footer{
@@ -207,33 +223,110 @@
 
 }
 
-/* ------------ */
+/* ------------ Info Section ------------ */
 
-.info{
-    display: grid;
-            /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
-                grid-template-columns:1fr;
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
 
-            padding-top: calc(var(--spacing) * 8);
-            gap: calc(var(--spacing) * 6);
-            max-width: 67.2rem;
-            margin: auto;
+.infoTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 2.4rem;
+  position: relative;
+  padding-bottom: 1.2rem;
 }
-.info .infoItem{
-    text-align: center;
-}
-.info .label{
-color: var(--text);
-font-family: var(--font-poppins);
-font-size: 1.6rem;
-font-weight: 600;
-margin-bottom: .8rem;
-}
-.info .text{
-color: var(--muted);
-font-size: 1.6rem;
 
+.infoTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  border-radius: 2px;
 }
+
+html[dir="rtl"] .infoTitle::after {
+  left: auto;
+  right: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2rem 2.4rem;
+  /* background: var(--blue-100); */
+  border: 1px solid var(--green);
+  border-radius: 1.2rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 112, 192, 0.12);
+}
+
+.iconCircle {
+  width: 4.8rem;
+  height: 4.8rem;
+  min-width: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  flex-shrink: 0;
+  transition: background 0.25s ease;
+}
+
+.infoCard:hover .iconCircle {
+  background: var(--green);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.cardLabel {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardValue {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--blue);
+  transition: color 0.2s ease;
+  word-break: break-word;
+}
+
+a.cardValue:hover {
+  color: var(--green);
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
 /* @media (max-width: 768px) {
   .info {
     grid-template-columns:1fr;

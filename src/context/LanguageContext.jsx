@@ -11,9 +11,12 @@ const content = {
       btn: "Contact Us",
     },
     hero: {
-      title: "Empowering modern Saudi Startups and SMEs with Smart IT Solutions",
-      subtitle:
-        "TAQNIAT ALMONSHAAT ALTHAKIYAH is a dynamic and innovative IT services provider founded in the heart of Saudi Arabia, dedicated to empowering startups, Small and Medium-sized Enterprises (SMEs) in their digital journey. Aligned with the ambitious goals of Saudi Vision 2030, we offer a comprehensive suite of IT services and solutions designed to enhance efficiency, foster growth, and drive innovation within the Kingdom's dynamic business ecosystem. From foundational IT infrastructure to cutting-edge AI & Cloud solutions, our expertise ensures our clients are well-equipped to compete and thrive in the digital age.",
+      title:
+        "Empowering modern Saudi Startups and SMEs with Smart IT Solutions",
+      subtitle1:
+        "TAQNIAT ALMONSHAAT ALTHAKIYAH is a dynamic and innovative IT services provider founded in the heart of Saudi Arabia, dedicated to empowering startups, Small and Medium-sized Enterprises (SMEs) in their digital journey.",
+      subtitle2:
+        "Aligned with the ambitious goals of Saudi Vision 2030, we offer a comprehensive suite of IT services and solutions designed to enhance efficiency, foster growth, and drive innovation within the Kingdom's dynamic business ecosystem. From foundational IT infrastructure to cutting-edge AI & Cloud solutions, our expertise ensures our clients are well-equipped to compete and thrive in the digital age.",
       vision: {
         label: "Our Vision",
         text: "To be one of the leading IT services providers in Saudi Arabia, recognized for innovation, excellence, and pivotal role in accelerating digital growth for startups and SMEs",
@@ -178,9 +181,12 @@ const content = {
       btn: "اتصل بنا",
     },
     hero: {
-      title: "تمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في المملكة بحلول تقنية ذكية",
-      subtitle:
-        "تقنيات المنشآت الذكية هي شركة مزوِّدة لخدمات تقنية المعلومات، تأسست في قلب المملكة العربية السعودية، وتكرّس جهودها لتمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في رحلتها الرقمية. انسجاماً مع الأهداف الطموحة لرؤية 2030، نقدم مجموعة متكاملة من خدمات وحلول تقنية المعلومات الهادفة إلى تعزيز الكفاءة، وتحفيز النمو، ودفع الابتكار داخل البيئة الأعمال الديناميكية في المملكة. من البنية التحتية الأساسية لتقنية المعلومات وصولاً إلى حلول الذكاء الاصطناعي والسحابة المتطورة، تضمن خبرتنا تأهيل عملائنا للمنافسة والازدهار في العصر الرقمي.",
+      title:
+        "تمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في المملكة بحلول تقنية ذكية",
+      subtitle1:
+        "تقنيات المنشآت الذكية هي شركة مزوِّدة لخدمات تقنية المعلومات، تأسست في قلب المملكة العربية السعودية، وتكرّس جهودها لتمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في رحلتها الرقمية. ",
+      subtitle2:
+        "انسجاماً مع الأهداف الطموحة لرؤية 2030، نقدم مجموعة متكاملة من خدمات وحلول تقنية المعلومات الهادفة إلى تعزيز الكفاءة، وتحفيز النمو، ودفع الابتكار داخل البيئة الأعمال الديناميكية في المملكة. من البنية التحتية الأساسية لتقنية المعلومات وصولاً إلى حلول الذكاء الاصطناعي والسحابة المتطورة، تضمن خبرتنا تأهيل عملائنا للمنافسة والازدهار في العصر الرقمي.",
       vision: {
         label: "رؤيتنا",
         text: "أن نكون من الشركات الرائدة في مجال خدمات تقنية المعلومات في المملكة العربية السعودية، معروفين بالابتكار والتميز، ودورنا المحوري في تسريع النمو الرقمي للشركات الناشئة والمنشآت الصغيرة والمتوسطة",

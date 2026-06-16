@@ -2,5 +2,6 @@
         border: 1px solid var(--green);
     background: var(--blue-100);
     overflow: hidden;
+    border-radius: .5rem;
 }
 

@@ -1,66 +1,67 @@
 header {
-    backdrop-filter: blur(12px);
-    position: fixed;
+  backdrop-filter: blur(12px);
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-    background: rgb(255 255 255 / 100%);
-    border-bottom: 1px solid var(--color-slate-200);
+  background: rgb(255 255 255 / 100%);
+  border-bottom: 1px solid var(--color-slate-200);
 }
 
-.bar{
+.bar {
   width: 100%;
   height: 0rem;
   background: var(--blue);
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.6rem 3.2rem;
-      /* padding-block: calc(var(--spacing) * 4); */
+  /* padding-block: calc(var(--spacing) * 4); */
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
+
 .logo .brand_mark {
-    width: 38px;
-    height: 38px;
-    border-radius: .65rem;
-    display: grid;
-    place-items: center;
-      background: linear-gradient(
-    -45deg,
-    #3b82f6,
-    #22d3ee
-  );
-    color: var(--white);
-    font-weight: 800;
-    font-size: 1.8rem;
-}
-.logo .text {
-  font-family: var( --font-tahoma);
-  color: var(--text);
-  font-weight: 700;
+  width: 38px;
+  height: 38px;
+  border-radius: .65rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(-45deg,
+      #3b82f6,
+      #22d3ee);
+  color: var(--white);
+  font-weight: 800;
   font-size: 1.8rem;
+}
+
+.logo .text {
   white-space: nowrap;
-      display: flex;
-    flex-direction: column;
-    width: 25rem;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  color: var(--color-cyan-400);
 }
 
 .navLinks {
-  /* font-family: var(--font-poppins); */
   display: flex;
   gap: 2.4rem;
   list-style: none;
 }
 
 .link {
-  font-family: var(--font-tahoma);
   text-decoration: none;
   color: var(--blue);
   transition: color 0.2s ease;
@@ -76,15 +77,17 @@ header {
   .navbar {
     padding: 1.6rem;
   }
+
   .navLinks {
     display: none;
   }
-   [dir="rtl"] .logo .text {
-  font-size: 1.5rem;
+
+  [dir="rtl"] .logo .text {
+    font-size: 1.5rem;
   }
 
-.logo .text {
-    max-width: 15rem !important;  
+  .logo .text {
+    max-width: 15rem !important;
   }
 }
 
@@ -93,11 +96,12 @@ header {
   align-items: center;
   gap: 2.4rem;
 }
-.actions{
+
+.actions {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
 }
 
 .langBtn {
@@ -105,10 +109,9 @@ header {
   border: none;
   color: var(--blue);
   border-radius: 2rem;
-    font-size: 1.4rem;
+  font-size: 1.4rem;
   font-weight: 600;
-    padding: .5rem 1rem;
-  font-family: var(--font-tahoma);
+  padding: .5rem 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -129,15 +132,14 @@ header {
 
 .langBtn:hover .langIcon {
   /* color: var(--color-blue-600); */
-}  
+}
 
-.contactBtn{
-      border: none;
-    background: var(--blue);
-    padding: .5rem 1.5rem;
-    color: var(--white);
-    font-size: 1.4rem;
-    font-weight: 500;
-    border-radius: .5rem;
-
+.contactBtn {
+  border: none;
+  background: var(--blue);
+  padding: .5rem 1.5rem;
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: .5rem;
 }

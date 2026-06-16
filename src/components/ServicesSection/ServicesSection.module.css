@@ -1,6 +1,6 @@
 .services {
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 2rem;
 }
@@ -8,7 +8,7 @@
 .cardContent {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
   padding: 1rem;
 }
 
@@ -32,6 +32,7 @@
         max-width: 100%;
     max-height: 100%;
     transition: var(--transition);
+        display: block;
 }
 .services img:hover{
 transform: scale(1.1);
