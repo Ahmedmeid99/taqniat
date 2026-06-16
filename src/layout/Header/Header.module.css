@@ -82,6 +82,10 @@ header {
    [dir="rtl"] .logo .text {
   font-size: 1.5rem;
   }
+
+.logo .text {
+    max-width: 15rem !important;  
+  }
 }
 
 .navActions {
