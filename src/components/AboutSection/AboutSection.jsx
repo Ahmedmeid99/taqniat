@@ -8,8 +8,8 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <Section>
-      <div className="container" id="about">
+    <Section id="about">
+      <div className="container">
         <HeroTitle title={t.about.title} />
         <div className={styles.about}>
           <div className={styles.aboutText}>
@@ -22,7 +22,7 @@ const AboutSection = () => {
             </article>
           </div>
           <div className={styles.imageCover}>
-            <img src={aboutImage} alt="" />
+            <img src={aboutImage} alt={t.about.companyName} />
           </div>
         </div>
       </div>

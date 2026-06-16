@@ -72,15 +72,17 @@ header {
 .link:hover {
   color: var(--text);
 }
-
+@media (max-width:1024px) {
+  .navLinks {
+    display: none;
+  }
+}
 @media (max-width:768px) {
   .navbar {
     padding: 1.6rem;
   }
 
-  .navLinks {
-    display: none;
-  }
+  
 
   [dir="rtl"] .logo .text {
     font-size: 1.5rem;
@@ -88,6 +90,10 @@ header {
 
   .logo .text {
     max-width: 15rem !important;
+  }
+
+  .logo span{
+    font-size: .75rem;
   }
 }
 
@@ -142,4 +148,7 @@ header {
   font-size: 1.4rem;
   font-weight: 500;
   border-radius: .5rem;
+}
+.contactBtn a{
+  color: inherit;
 }

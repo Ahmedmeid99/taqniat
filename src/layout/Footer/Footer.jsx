@@ -12,9 +12,24 @@ const Footer = () => {
             <a href="#" className={styles.logo} aria-label="Go to top">
               <img src={logo} alt="" />
             </a>
-            <p className={styles.text}>
-              {t.footer.desc}
-            </p>
+            <p className={styles.text}>{t.footer.desc}</p>
+          </div>
+          <div className={styles.col}>
+            <div className={styles.label}>{t.footer.company}</div>
+            <ul>
+              <li>
+                <a href="/#">{t.footer.home}</a>
+              </li>
+              <li>
+                <a href="#about">{t.footer.about}</a>
+              </li>
+              <li>
+                <a href="#contact">{t.footer.contact}</a>
+              </li>
+              <li>
+                <a href="#contact">{t.footer.privacy}</a>
+              </li>
+            </ul>
           </div>
 
           <div className={styles.col}>
@@ -28,21 +43,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#services">{t.footer.cloud}</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.col}>
-            <div className={styles.label}>{t.footer.company}</div>
-            <ul>
-              <li>
-                <a href="#about">{t.footer.about}</a>
-              </li>
-              <li>
-                <a href="#contact">{t.footer.contact}</a>
-              </li>
-              <li>
-                <a href="#contact">{t.footer.privacy}</a>
               </li>
             </ul>
           </div>

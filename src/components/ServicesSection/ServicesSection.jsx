@@ -147,8 +147,9 @@ const ServicesSection = () => {
           {content.items.map((service) => (
             <Card key={service.id}>
               <div className={styles.imageCover}>
-                <img src={service.image} alt="" />
+                <img src={service.image} alt={service.title} />
               </div>
+              <div className={styles.accentBar} />
               <div className={styles.cardContent}>
                 <h4>{service.title}</h4>
                 <p>{service.description}</p>

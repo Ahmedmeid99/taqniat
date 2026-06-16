@@ -76,7 +76,9 @@ const Header = () => {
             <span>{lang === "en" ? "AR" : "EN"}</span>
           </button>
 
-          <button className={styles.contactBtn}>{t.header.btn}</button>
+          <button className={styles.contactBtn}>
+            <a href="#contact">{t.header.btn}</a>
+          </button>
         </div>
       </nav>
     </header>

@@ -45,11 +45,11 @@ line-height: 1.4;
 .companyInfo{
 display: flex;
     justify-content: center;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
 }
 .companyInfo .vision,.companyInfo .mission{
         padding: 1.2rem 2.4rem;
-        /* flex: 1; */
+        flex: 1;
 }
 .companyInfo .vision{
 background: var(--blue);
@@ -91,8 +91,20 @@ html[lang="ar"] .hero .title{right: 5%;}
 }
 
 /* Tablets */
-@media (min-width: 768px) {
-
+@media (max-width: 768px) {
+.hero{
+        height: 65vh;
+}
+.companyInfo p{
+    color: inherit;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    margin-left:0;
+}
+.hero .subTitle{
+    margin: 1rem !important;
+}
 }
 
 /* Desktop */
