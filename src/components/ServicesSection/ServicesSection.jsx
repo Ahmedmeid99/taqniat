@@ -12,7 +12,7 @@ import image5 from "../../assets/Images/05.png";
 import image6 from "../../assets/Images/06.png";
 const services = {
   en: {
-    title: "Our Comprehensive IT Services",
+    title: "Our Comprehensive Services",
     items: [
       {
         id: "core",
@@ -20,15 +20,15 @@ const services = {
         description:
           "We provide the essential building blocks for any modern business, including Basic IT Setup, IT Infrastructure Setup, IT Support and IT Managed Services, ensuring stable, secure, and reliable operations.",
         image: image1,
-        tags: ["Basic IT Setup", "Infrastructure Setup", "IT Managed Services"],
+        tags: ["Basic IT Setup", "IT Infrastructure Setup", "IT Support", "IT Managed Services"],
       },
       {
         id: "digital",
         title: "Digital Presence & Engagement",
         description:
-          "We craft compelling digital experiences through professional Website Development and intuitive Mobile Application Development, ensuring our clients can effectively reach & engage their target audiences.",
+          "We craft compelling digital experiences through professional Website Development and intuitive Mobile Application Development, ensuring our clients can effectively reach and engage their target audiences.",
         image: image2,
-        tags: ["Website Development", "Mobile App Development", "UI/UX Design"],
+        tags: ["Website Development", "Mobile Application Development"],
       },
       {
         id: "custom",
@@ -56,7 +56,7 @@ const services = {
         description:
           "Our Cloud Solution offerings provide scalable and secure infrastructure, while our Voice Solutions provide advanced communications to keep businesses connected.",
         image: image5,
-        tags: ["Cloud Solutions", "Voice Solutions", "Scalability"],
+        tags: ["Cloud Solutions", "Voice Solutions"],
       },
       {
         id: "guidance",
@@ -65,7 +65,6 @@ const services = {
           "We provide strategic advice and expert guidance on technology deployment and digital evolution, ensuring alignment with business objectives.",
         image: image6,
         tags: [
-          "Strategic Advice",
           "Technology Deployment",
           "Digital Evolution",
         ],
@@ -73,63 +72,68 @@ const services = {
     ],
   },
   ar: {
-    title: "خدماتنا الشاملة لتقنية المعلومات",
+    title: "خدماتنا الشاملة",
     items: [
       {
         id: "core",
-        title: "الخدمات الأساسية لتقنية المعلومات",
+        title: "خدمات تقنية المعلومات الأساسية",
         description:
-          "نحن نقدم اللبنات الأساسية لأي عمل حديث، بما في ذلك الإعداد الأساسي لتقنية المعلومات، وإعداد البنية التحتية لتقنية المعلومات، والدعم الفني والخدمات المدارة لتقنية المعلومات، مما يضمن عمليات مستقرة وآمنة وموثوقة.",
+          "نوفر لبنات البناء الأساسية لأي منشأة حديثة، بما في ذلك التأسيس الأولي لتقنية المعلومات، وإعداد البنية التحتية لتقنية المعلومات، والدعم التقني، والخدمات المدارة لتقنية المعلومات، مما يضمن بيئة عمل مستقرة وآمنة وموثوقة.",
         image: image1,
         tags: [
-          "إعداد تقنية المعلومات",
-          "البنية التحتية للشبكات",
-          "الخدمات المدارة",
+          "التأسيس الأولي لتقنية المعلومات",
+          "إعداد البنية التحتية لتقنية المعلومات",
+          "الدعم التقني",
+          "الخدمات المدارة لتقنية المعلومات",
         ],
       },
       {
         id: "digital",
-        title: "التواجد والتفاعل الرقمي",
+        title: "الحضور الرقمي والتفاعل",
         description:
-          "نصنع تجارب رقمية مقنعة من خلال تطوير المواقع المهنية وتطوير تطبيقات الهاتف المحمول البديهية، مما يضمن لعملائنا الوصول والتفاعل الفعال مع جمهورهم المستهدف.",
+          "نبني تجارب رقمية فعالة من خلال تطوير المواقع الإلكترونية الاحترافية وتطوير تطبيقات الجوال، مما يضمن قدرة عملائنا على الوصول بفعالية إلى عملائهم والتفاعل معهم.",
         image: image2,
         tags: [
-          "تطوير مواقع الويب",
-          "تطبيقات الهاتف المحمول",
-          "تصميم واجهة المستخدم",
+          "تطوير المواقع الإلكترونية الاحترافية",
+          "تطوير تطبيقات الجوال",
         ],
       },
       {
         id: "custom",
         title: "الحلول المخصصة والتكامل",
         description:
-          "تتيح لنا خبرتنا في تطوير التطبيقات وتكامل الأنظمة وتطبيق البرمجيات كخدمة (SaaS) بناء حلول مخصصة وربط الأنظمة المتباينة بسلاسة، مما يخلق سير عمل تشغيلي موحد وفعال.",
+          "نقدم حلولاً تقنية مصممة وفقاً لاحتياجات الأعمال، تشمل تطوير التطبيقات، وتكامل الأنظمة، وتنفيذ أنظمة تخطيط موارد المنشآت، والحلول السحابية، بما يضمن انسيابية العمليات ورفع الكفاءة التشغيلية.",
         image: image3,
-        tags: ["تطوير التطبيقات الخاصة", "تكامل الأنظمة", "حلول SaaS"],
+        tags: [
+          "تطوير التطبيقات",
+          "تكامل الأنظمة",
+          "تنفيذ أنظمة تخطيط موارد المنشآت",
+          "الحلول السحابية",
+        ],
       },
       {
         id: "emerging",
-        title: "التقنيات الناشئة",
+        title: "التقنيات المتقدمة والناشئة",
         description:
-          "نمكن الشركات من الاستفادة من قوة الذكاء الاصطناعي وإدارة البيانات والأتمتة لدفع الابتكار، والحصول على رؤى قابلة للتنفيذ، وتبسيط العمليات.",
+          "نمكّن المنشآت من الاستفادة من تقنيات الذكاء الاصطناعي وإدارة البيانات والأتمتة لتعزيز الابتكار، وتحسين اتخاذ القرار، ورفع كفاءة العمليات.",
         image: image4,
-        tags: ["الذكاء الاصطناعي", "إدارة البيانات", "الأتمتة الذكية"],
+        tags: ["تقنيات الذكاء الاصطناعي", "إدارة البيانات", "الأتمتة"],
       },
       {
         id: "infrastructure",
         title: "البنية التحتية الحديثة",
         description:
-          "توفر عروض الحلول السحابية لدينا بنية تحتية قابلة للتطوير وآمنة، بينما توفر حلول الصوت اتصالات متقدمة للحفاظ على اتصال الشركات.",
+          "نوفر حلولاً سحابية آمنة ومرنة تدعم نمو الأعمال، بالإضافة إلى حلول الاتصالات الصوتية الحديثة التي تضمن تواصلاً فعالاً ومستداماً.",
         image: image5,
-        tags: ["الحلول السحابية", "حلول الصوت الذكية", "قابلية التوسع"],
+        tags: ["حلول سحابية آمنة ومرنة", "حلول الاتصالات الصوتية الحديثة"],
       },
       {
         id: "guidance",
         title: "التوجيه الاستراتيجي",
         description:
-          "نقدم المشورة الاستراتيجية والتوجيه الخبير بشأن نشر التكنولوجيا والتطور الرقمي، مما يضمن التوافق مع أهداف العمل.",
+          "نقدم لعملائنا التوجيهات المتخصصة في تطبيق الحلول التقنية المناسبة، وتطوير قدراتهم الرقمية بما يتوافق مع أهدافهم وخططهم الاستراتيجية.",
         image: image6,
-        tags: ["الاستشارات التقنية", "نشر التكنولوجيا", "التحول الرقمي"],
+        tags: ["تطبيق الحلول التقنية المناسبة", "تطوير قدراتهم الرقمية"],
       },
     ],
   },

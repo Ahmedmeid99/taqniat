@@ -93,7 +93,7 @@ html[lang="ar"] .hero .title{right: 5%;}
 /* Tablets */
 @media (max-width: 768px) {
 .hero{
-        height: 70vh;
+        height: 65vh;
 }
 .hero .title{
     top: 15%;
