@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 import logo from "../../assets/logos/logo.png";
 import logoAr from "../../assets/logos/logo-ar.jpg";
+import languageIcon from "../../assets/icons/language.png";
 
 // Map each nav link to its section ID (null = top of page / Home)
 const NAV_LINKS = [
@@ -98,21 +99,11 @@ const Header = () => {
             className={styles.langBtn}
             aria-label="Toggle language"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16" height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            <img
+              src={languageIcon}
+              alt="Language Icon"
               className={styles.langIcon}
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-              <path d="M2 12h20"></path>
-            </svg>
+            />
             <span>{lang === "en" ? "AR" : "EN"}</span>
           </button>
 

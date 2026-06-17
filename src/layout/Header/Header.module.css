@@ -132,8 +132,10 @@ header {
 }
 
 .langIcon {
-  /* color: var(--muted); */
-  transition: color 0.2s ease;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
 }
 
 .langBtn:hover .langIcon {

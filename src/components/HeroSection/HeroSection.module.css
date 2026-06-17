@@ -15,9 +15,9 @@
     position: absolute;
     top: 20%;
     left: 5%;
-    max-width: 35rem;
+    max-width: 50rem;
     color: var(--white);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-shadow: 0px 0px 3px #000000;
 }
 
@@ -98,6 +98,7 @@ html[lang="ar"] .hero .title{right: 5%;}
 .hero .title{
     top: 15%;
     line-height: 1.2;
+    font-size: 3rem;
 }
 .hero .subTitle{
     margin: 1rem !important;
