@@ -95,15 +95,20 @@ html[lang="ar"] .hero .title{right: 5%;}
 .hero{
         height: 65vh;
 }
-.companyInfo p{
-    color: inherit;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-    margin-left:0;
+.hero .title{
+    top: 15%;
+    line-height: 1.2;
 }
 .hero .subTitle{
     margin: 1rem !important;
+    font-size: 1.3rem;
+}
+.companyInfo p{
+    color: inherit;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    margin-left:0;
 }
 }
 
