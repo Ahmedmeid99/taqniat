@@ -41,7 +41,7 @@
 .imageCover {}
 
 .imageCover img {
-  border: 3px solid var(--green-100);
+  border: 3px solid var(--blue-100);
   border-radius: .5rem;
 }
 

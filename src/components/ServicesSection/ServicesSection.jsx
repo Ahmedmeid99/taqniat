@@ -1,15 +1,14 @@
-import servicesContent from "../../data/servicesContent.json";
 import { useLanguage } from "../../context/LanguageContext";
 import HeroTitle from "../../ui/HeroTitle/HeroTitle";
 import styles from "./ServicesSection.module.css";
 import Section from "../../ui/Section/Section";
 import Card from "../../ui/Card/Card";
-import image1 from "../../assets/Images/01.png";
-import image2 from "../../assets/Images/02.png";
-import image3 from "../../assets/Images/03.png";
-import image4 from "../../assets/Images/04.png";
-import image5 from "../../assets/Images/05.png";
-import image6 from "../../assets/Images/06.png";
+import image1 from "../../assets/Images/01.webp";
+import image2 from "../../assets/Images/02.webp";
+import image3 from "../../assets/Images/03.webp";
+import image4 from "../../assets/Images/04.webp";
+import image5 from "../../assets/Images/05.webp";
+import image6 from "../../assets/Images/06.webp";
 const services = {
   en: {
     title: "Our Comprehensive Services",

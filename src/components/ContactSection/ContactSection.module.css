@@ -119,31 +119,19 @@ html[lang="ar"] .mainBtn svg{
 
 
 
-.formGrid{
-
- display:grid;
-
- grid-template-columns:1fr;
-
- gap:2rem;
-
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-
-@media(min-width:640px){
-
-.formGrid{
-
- grid-template-columns:1fr 1fr;
-
-}
-
-.full{
-
- grid-column:span 2;
-
-}
-
+@media(min-width:640px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .full {
+    grid-column: span 2;
+  }
 }
 
 

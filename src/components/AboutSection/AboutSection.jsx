@@ -1,6 +1,6 @@
 import Section from "../../ui/Section/Section";
 import styles from "./AboutSection.module.css";
-import aboutImage from "../../assets/Images/WhyUs.png";
+import aboutImage from "../../assets/Images/WhyUs.webp";
 import HeroTitle from "../../ui/HeroTitle/HeroTitle";
 import { useLanguage } from "../../context/LanguageContext";
 
@@ -8,8 +8,8 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <Section >
-      <div className="container" id="about" >
+    <Section>
+      <div className="container" id="about">
         <HeroTitle title={t.about.title} />
         <div className={styles.about}>
           <div className={styles.aboutText}>

@@ -143,13 +143,10 @@ const content = {
         namePlaceholder: "John Doe",
         email: "Email",
         emailPlaceholder: "john@example.com",
-        phone: "Phone",
-        phonePlaceholder: "+966 50 000 0000",
-        company: "Company",
-        companyPlaceholder: "My Startup LLC",
-        service: "Service",
+        title: "Subject",
+        titlePlaceholder: "How can we help you?",
         message: "Message",
-        send: "Send",
+        send: "Send Message",
         success: "Thank you! Your message has been sent successfully.",
         error: "Please fill in all required fields.",
       },
@@ -257,7 +254,7 @@ const content = {
     },
     about: {
       title: "من نحن",
-      slug: "تعرّف علينا",
+      slug: "من نحن ؟",
       companyName: "تقنيات المنشآت الذكية",
       p1: "شركة مزوِّدة لخدمات تقنية المعلومات، تأسست في قلب المملكة العربية السعودية، وتكرّس جهودها لتمكين الشركات الناشئة والمنشآت الصغيرة والمتوسطة في رحلتها الرقمية.",
       p2: "انسجاماً مع الأهداف الطموحة لرؤية 2030، نقدم مجموعة متكاملة من خدمات وحلول تقنية المعلومات الهادفة إلى تعزيز الكفاءة وتحفيز النمو ودفع الابتكار داخل البيئة الأعمال الديناميكية في المملكة.",
@@ -316,13 +313,10 @@ const content = {
         namePlaceholder: "محمد أحمد",
         email: "البريد الإلكتروني",
         emailPlaceholder: "example@domain.com",
-        phone: "الهاتف",
-        phonePlaceholder: "+966 50 000 0000",
-        company: "الشركة",
-        companyPlaceholder: "شركتي للتقنية",
-        service: "الخدمة",
+        title: "موضوع الرسالة",
+        titlePlaceholder: "كيف يمكننا مساعدتك؟",
         message: "الرسالة",
-        send: "إرسال",
+        send: "إرسال الرسالة",
         success: "شكراً لك! تم إرسال رسالتك بنجاح.",
         error: "يرجى ملء جميع الحقول المطلوبة.",
       },
@@ -366,6 +360,10 @@ export function LanguageProvider({ children }) {
   useEffect(() => {
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = lang;
+    document.title =
+      lang === "ar"
+        ? "تقنيات المنشآت | حلول ذكية لتقنية المعلومات وتطوير البرمجيات بالمملكة"
+        : "TAQNIAT ALMONSHAAT | Smart IT Solutions & Software Development Saudi Arabia";
   }, [lang]);
 
   return (

@@ -1,37 +1,66 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Section from "../../ui/Section/Section";
 import styles from "./ContactSection.module.css";
 import HeroTitle from "../../ui/HeroTitle/HeroTitle";
 import { useLanguage } from "../../context/LanguageContext";
 
+// EmailJS Credentials Configuration
+// Can be customized via Vite environment variables (.env files)
+const EMAILJS_SERVICE_ID =
+  import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_3pap212";
+const EMAILJS_TEMPLATE_ID =
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_75kbutg";
+const EMAILJS_PUBLIC_KEY =
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "w31F-y6ZwGk-uAdsp";
+
 const ContactSection = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const { t } = useLanguage();
+  const [loading, setLoading] = useState(false);
+  const { lang, t } = useLanguage();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const form = e.target;
 
     const name = form.name.value.trim();
     const email = form.email.value.trim();
+    const title = form.title.value.trim();
     const message = form.message.value.trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !title || !message) {
       setError(true);
       setSuccess(false);
       return;
     }
 
-    setSuccess(true);
+    setLoading(true);
     setError(false);
+    setSuccess(false);
 
-    form.reset();
-
-    setTimeout(() => {
-      setSuccess(false);
-    }, 5000);
+    emailjs
+      .sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form,
+        EMAILJS_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          setError(false);
+          setLoading(false);
+          form.reset();
+          setTimeout(() => setSuccess(false), 5000);
+        },
+        (err) => {
+          console.error("EmailJS submission failure:", err);
+          setError(true);
+          setSuccess(false);
+          setLoading(false);
+        },
+      );
   };
 
   return (
@@ -162,6 +191,7 @@ const ContactSection = () => {
                 <input
                   name="name"
                   placeholder={t.contact.form.namePlaceholder}
+                  required
                 />
               </div>
 
@@ -171,34 +201,36 @@ const ContactSection = () => {
                   name="email"
                   type="email"
                   placeholder={t.contact.form.emailPlaceholder}
+                  required
                 />
               </div>
 
-              <div className={styles.group}>
-                <label>{t.contact.form.phone}</label>
+              <div className={`${styles.group} ${styles.full}`}>
+                <label>{t.contact.form.title} *</label>
                 <input
-                  name="phone"
-                  placeholder={t.contact.form.phonePlaceholder}
-                />
-              </div>
-
-              <div className={styles.group}>
-                <label>{t.contact.form.company}</label>
-                <input
-                  name="company"
-                  placeholder={t.contact.form.companyPlaceholder}
+                  name="title"
+                  placeholder={t.contact.form.titlePlaceholder}
+                  required
                 />
               </div>
 
               <div className={`${styles.group} ${styles.full}`}>
                 <label>{t.contact.form.message} *</label>
-                <textarea name="message" rows="4" />
+                <textarea name="message" rows="5" required />
               </div>
             </div>
 
             <div className={styles.footer}>
-              <button className={styles.contactBtn} type="submit">
-                {t.contact.form.send}
+              <button
+                className={styles.contactBtn}
+                type="submit"
+                disabled={loading}
+              >
+                {loading
+                  ? lang === "ar"
+                    ? "جاري الإرسال..."
+                    : "Sending..."
+                  : t.contact.form.send}
               </button>
             </div>
           </form>
