@@ -178,15 +178,28 @@ html[lang="ar"] .mainBtn svg{
         font-size: 1.6rem;
     color: var(--blue);
 }
-.contactBtn{
-      border: none;
-    background: var(--blue);
-    padding: .75rem 1.5rem;
-    color: var(--white);
-    font-size: 1.4rem;
-    font-weight: 500;
-    border-radius: .5rem;
-    width: 100%;
+.contactBtn {
+  border: none;
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-cyan-500));
+  padding: 1.2rem 2.4rem;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(21, 93, 252, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contactBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1243d4, #00a8cc);
+  box-shadow: 0 8px 24px rgba(21, 93, 252, 0.3);
+}
+
+.contactBtn:active {
+  transform: translateY(0);
 }
 
 

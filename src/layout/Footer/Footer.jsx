@@ -1,8 +1,11 @@
 import styles from "./Footer.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 import logo from "../../assets/logos/logo-footer.png";
+import logoAr from "../../assets/logos/logo-ar-white.png";
+
 const Footer = () => {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const currentLogo = lang === "ar" ? logoAr : logo;
 
   return (
     <footer className={styles.footer}>
@@ -10,7 +13,7 @@ const Footer = () => {
         <div className={styles.content}>
           <div className={styles.info}>
             <a href="#" className={styles.logo} aria-label="Go to top">
-              <img src={logo} alt="" />
+              <img src={currentLogo} alt="" />
             </a>
             <p className={styles.text}>{t.footer.desc}</p>
           </div>
