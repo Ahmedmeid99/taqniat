@@ -202,26 +202,18 @@ html[lang="ar"] .mainBtn svg{
 }
 
 
-
+.success, .error{
+  font-size: 1.6rem;
+  padding:1.6rem;
+  margin-bottom:1.6rem;
+}
 .success{
-
- padding:1.6rem;
-
  background:#dcfce7;
-
- margin-bottom:1.6rem;
-
 }
 
 
 .error{
-
- padding:1.6rem;
-
  background:#fee2e2;
-
- margin-bottom:1.6rem;
-
 }
 
 /* ------------ Info Section ------------ */

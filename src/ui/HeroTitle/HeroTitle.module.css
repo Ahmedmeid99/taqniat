@@ -1,10 +1,10 @@
 /* ── Wrapper ─────────────────────────────── */
 .heroTitleContainer {
-  /* margin-bottom: 4.8rem; */
   text-align: center;
   position: relative;
   margin: auto;
-margin-bottom: 6.4rem;
+  /* margin-bottom: 6.4rem; */
+  margin-bottom: 4.8rem;
 max-width: 67.2rem;
 }
 
