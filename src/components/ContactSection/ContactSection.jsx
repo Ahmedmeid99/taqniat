@@ -7,12 +7,9 @@ import { useLanguage } from "../../context/LanguageContext";
 
 // EmailJS Credentials Configuration
 // Can be customized via Vite environment variables (.env files)
-const EMAILJS_SERVICE_ID =
-  import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_3pap212";
-const EMAILJS_TEMPLATE_ID =
-  import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_75kbutg";
-const EMAILJS_PUBLIC_KEY =
-  import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "w31F-y6ZwGk-uAdsp";
+const EMAILJS_SERVICE_ID = "service_3pap212";
+const EMAILJS_TEMPLATE_ID = "template_75kbutg";
+const EMAILJS_PUBLIC_KEY = "w31F-y6ZwGk-uAdsp";
 
 const ContactSection = () => {
   const [success, setSuccess] = useState(false);
