@@ -14,7 +14,7 @@ const Home = () => {
       <ServicesSection />
       <ContactSection />
       <MapSection />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </Layout>
   );
 };
