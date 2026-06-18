@@ -7,10 +7,10 @@ import languageIcon from "../../assets/icons/language.png";
 
 // Map each nav link to its section ID (null = top of page / Home)
 const NAV_LINKS = [
-  { key: "home",     href: "#",        sectionId: null },
-  { key: "about",    href: "#about",   sectionId: "about" },
-  { key: "services", href: "#services",sectionId: "services" },
-  { key: "contact",  href: "#contact", sectionId: "contact" },
+  { key: "home", href: "#", sectionId: null },
+  { key: "about", href: "#about", sectionId: "about" },
+  { key: "services", href: "#services", sectionId: "services" },
+  { key: "contact", href: "#contact", sectionId: "contact" },
 ];
 
 const Header = () => {
@@ -18,7 +18,9 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
-    const sectionIds = NAV_LINKS.filter((l) => l.sectionId).map((l) => l.sectionId);
+    const sectionIds = NAV_LINKS.filter((l) => l.sectionId).map(
+      (l) => l.sectionId,
+    );
     const HEADER_HEIGHT = 90;
 
     const getActiveSection = () => {
@@ -58,7 +60,6 @@ const Header = () => {
     <header>
       <div className={styles.bar}></div>
       <nav className={styles.navbar + " container"}>
-
         {/* Logo */}
         <a href="#" className={styles.logo} aria-label="Go to top">
           <span className={styles.text}>
@@ -111,7 +112,6 @@ const Header = () => {
             <a href="#contact">{t.header.btn}</a>
           </button>
         </div>
-
       </nav>
     </header>
   );

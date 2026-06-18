@@ -3,12 +3,12 @@ import HeroTitle from "../../ui/HeroTitle/HeroTitle";
 import styles from "./ServicesSection.module.css";
 import Section from "../../ui/Section/Section";
 import Card from "../../ui/Card/Card";
-import image1 from "../../assets/Images/01.webp";
-import image2 from "../../assets/Images/02.webp";
-import image3 from "../../assets/Images/03.webp";
-import image4 from "../../assets/Images/04.webp";
-import image5 from "../../assets/Images/05.webp";
-import image6 from "../../assets/Images/06.webp";
+import image1 from "../../assets/images/01.webp";
+import image2 from "../../assets/images/02.webp";
+import image3 from "../../assets/images/03.webp";
+import image4 from "../../assets/images/04.webp";
+import image5 from "../../assets/images/05.webp";
+import image6 from "../../assets/images/06.webp";
 const services = {
   en: {
     title: "Our Comprehensive Services",
@@ -19,7 +19,12 @@ const services = {
         description:
           "We provide the essential building blocks for any modern business, including Basic IT Setup, IT Infrastructure Setup, IT Support and IT Managed Services, ensuring stable, secure, and reliable operations.",
         image: image1,
-        tags: ["Basic IT Setup", "IT Infrastructure Setup", "IT Support", "IT Managed Services"],
+        tags: [
+          "Basic IT Setup",
+          "IT Infrastructure Setup",
+          "IT Support",
+          "IT Managed Services",
+        ],
       },
       {
         id: "digital",
@@ -63,10 +68,7 @@ const services = {
         description:
           "We provide strategic advice and expert guidance on technology deployment and digital evolution, ensuring alignment with business objectives.",
         image: image6,
-        tags: [
-          "Technology Deployment",
-          "Digital Evolution",
-        ],
+        tags: ["Technology Deployment", "Digital Evolution"],
       },
     ],
   },
@@ -92,10 +94,7 @@ const services = {
         description:
           "نبني تجارب رقمية فعالة من خلال تطوير المواقع الإلكترونية الاحترافية وتطوير تطبيقات الجوال، مما يضمن قدرة عملائنا على الوصول بفعالية إلى عملائهم والتفاعل معهم.",
         image: image2,
-        tags: [
-          "تطوير المواقع الإلكترونية الاحترافية",
-          "تطوير تطبيقات الجوال",
-        ],
+        tags: ["تطوير المواقع الإلكترونية الاحترافية", "تطوير تطبيقات الجوال"],
       },
       {
         id: "custom",

@@ -1,6 +1,6 @@
 import Section from "../../ui/Section/Section";
 import styles from "./AboutSection.module.css";
-import aboutImage from "../../assets/Images/WhyUs.webp";
+import aboutImage from "../../assets/images/WhyUs.webp";
 import HeroTitle from "../../ui/HeroTitle/HeroTitle";
 import { useLanguage } from "../../context/LanguageContext";
 
